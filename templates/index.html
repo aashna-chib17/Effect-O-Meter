@@ -1,0 +1,528 @@
+<html>
+    <head>
+        <title>Effect-O-Meter</title>
+        <link href="final.css" rel="stylesheet" media="all" type="text/css">
+        <link href ="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel = "stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          body{
+    background-color: #F5F5F5;
+}
+#main{
+    width: 1400px;
+    height: 800px;
+    /* border: 1px solid black; */
+    margin: auto;
+}
+#header{
+    width: 1400px;
+    height: 150;
+    /* border: 1px solid black; */
+}
+#middle{
+    width: 1400px;
+    height: 650px;
+    /* border: 1px solid black; */
+}
+#navbar{
+    width: 300px;
+    height: 650px;
+    /* border: 1px solid black; */
+    float: Left;
+}
+#remain{
+    width: 1096px;
+    height: 750px;
+    /* border: 1px solid black; */
+    float: Right;
+    background-color: black;
+}
+h1{
+    font-size: 65;
+    font-family: Courier;
+    background-color: black;
+    color: red;
+}
+.icon-bar{
+    margin-top: 20px;
+    margin-left:px;
+    width: 140px;
+    background-color: black;
+}
+.icon-bar a{
+    
+    display: block;
+    font-size: 45px;
+    color: red;
+    text-align: center;
+    padding: 30px;
+}
+#navbar:hover .icon-bar{
+    color:white;
+}
+#covid{
+    width:1094px;
+    height: 100px;  
+}
+h2{
+    margin-top: 3px;
+    float: left;
+    font-size: 40;
+    font-family: calibri;
+    color:red;
+    margin-top: 25px;
+    margin-left: 25px;
+}                 
+#overview{
+    width:1094px; 
+}     
+p{
+    font-size: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: calibri;
+    float: left;
+    color: white;
+}
+h3{
+    align-items: center;
+    color: red;
+    font-size: 35;
+    margin-top: 25px;
+    margin-left: 20px;
+} 
+#reports{
+    width: 1400px;
+    height: 390px;
+    margin: auto;
+    margin-top: 150px;
+    /* border: 1px solid black; */
+}
+#box1{
+    width: 280px;
+    height: 280px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid black; */
+    border-radius: 195px;
+    float: left;
+    background-color: black;
+    transition: transform .2s;
+}
+#box1:hover {
+    background-color: #F5F5F5;
+  }
+#box2{
+    width: 280px;
+    height: 280px;
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid black; */
+    border-radius: 195px;
+    float: left;
+    background-color: black;
+    transition: transform .2s;
+}
+#box2:hover {
+    background-color: #F5F5F5;
+  }
+#box3{
+    width: 280px;
+    height: 280px;
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid black; */
+    border-radius: 195px;
+    float: left;
+    background-color: black;
+    transition: transform .2s;
+}
+#box3:hover {
+    background-color: #F5F5F5;
+  }
+#box4{
+    width: 280px;
+    height: 280px;
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid black; */
+    border-radius: 195px;
+    float: left;
+    background-color: black;
+}
+#box4:hover {
+    background-color: #F5F5F5;
+  }
+h4{
+    font-size: 35px;
+    color:red;
+}
+h5{
+    margin-left: 50px;
+    font-size: 35px;
+    color:red;
+}
+
+h6{
+    margin-top: 50px;
+    margin-left: 80px;
+    font-size: 30px;
+    color:red;
+}
+
+
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  
+
+  #symptoms{
+      background-color: black;
+      margin-top: 150px;
+      margin-left: 50px;
+      width: 1400px;
+      height: 500px;
+      border: 1px solid black;
+  }
+    #about{
+        margin-top: 100px;
+        width:1500px;
+        height: 50px; 
+        border: 1px solid black;
+        background-color: black;
+
+  }
+  #myInput1 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px 90px;
+  padding: 15px 60px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+th{
+background-color: black;
+color:white;
+}
+p1{
+  font-size: 20px;
+  color: red;
+}
+button{
+  margin-top: 15px;
+  margin-right: 100px;
+  padding: 15px 20px;
+  font-size: 15px;
+  float: right;
+  background-color: black;
+  color: red;
+  cursor: pointer;
+}
+
+        </style>
+    </head>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+    </script>
+            <script>
+                function myFunction1() {
+                  var input, filter, table, tr, td, i, txtValue;
+                  input = document.getElementById("myInput1");
+                  filter = input.value.toUpperCase();
+                  table = document.getElementById("myTable1");
+                  tr = table.getElementsByTagName("tr");
+                  for (i = 0; i < tr.length; i++) {
+                  td = tr[i].getElementsByTagName("td")[0];
+                  if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                  } else {
+                  tr[i].style.display = "none";
+                   }
+                  }       
+                 }
+                }
+                </script>
+                <script>
+                $(function() {
+                    $('a[href*=#]').on('click', function(e) {
+                      e.preventDefault();
+                      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+                    });
+                  });
+                </script>
+                
+                
+                <script>
+                  function myFunction() {
+                    var input, filter, table, tr, td, i, txtValue;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
+                    for (i = 0; i < tr.length; i++) {
+                      td = tr[i].getElementsByTagName("td")[0];
+                      if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          tr[i].style.display = "";
+                        } else {
+                          tr[i].style.display = "none";
+                        }
+                      }       
+                    }
+                  }
+                  </script>
+                  <script>
+                    //Get the button
+                    var mybutton = document.getElementById("myBtn");
+                    
+                    // When the user scrolls down 20px from the top of the document, show the button
+                    window.onscroll = function() {scrollFunction()};
+                    
+                    function scrollFunction() {
+                      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                      } else {
+                        mybutton.style.display = "none";
+                      }
+                    }
+                    
+                    // When the user clicks on the button, scroll to the top of the document
+                    function topFunction() {
+                      document.body.scrollTop = 0;
+                      document.documentElement.scrollTop = 0;
+                    }
+                    </script>
+                    
+                  
+    <body>
+        <div id="main">
+            <div id="header"><h1><center><i class="fa fa-ravelry" aria-hidden="true"></i>E f f e c t - O - M e t e r</center></h1></div>
+            <div id="middle">
+                <div id="navbar">
+                    <div class="icon-bar">
+                        <a href="#" onclick="coro.html" class="active"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    </div>
+                    <br>
+                    <section id="section01" class="demo">
+                    <div class="icon-bar">
+                        <a href="#section02"><i class="fa fa-arrow-down" aria-hidden="true"><br><p1>India State Wise</p1></i></a>
+                    </div>
+                    </section>
+                    <br>
+                    <section id="section03" class="demo">
+                    <div class="icon-bar">
+                        <a href="#section04"><i class="fa fa-globe" aria-hidden="true"><br><p1>Country Wise</p1></i></a>
+                    </div>
+                </section>
+                <section id="section05" class="demo">
+                  <div class="icon-bar">
+                      <a href="#section06"><i class="fa fa-hand-rock-o" aria-hidden="true"><br><p1>Symptoms</p1></i></a>
+                  </div>
+              </section>
+                </div>
+                <div id="remain">
+                    <div id="covid">
+                        <h2> C O V I D - 1 9</h2>
+                    </div>
+                    <div id="overview">
+                        <h3><i>Overview : </i></h3>
+                        <p align="left">
+                            Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus
+                            Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.<br><br>
+                            Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more
+                            likely to develop serious illness.<br>
+            
+                             The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads.
+                             Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face. <br>
+            
+            
+                            
+            
+                            The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, <br><br>
+                            so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).
+                            <br>
+            
+            
+                        </p>
+                        <h3><i>Prevention : </i></h3>
+                        <p align="left">
+                            To prevent infection and to slow transmission of COVID-19, do the following:<br><br>
+            
+                            -Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.<br>
+                            -Maintain at least 1 metre distance between you and people coughing or sneezing.<br>
+                            -Avoid touching your face.<br>
+                            -Cover your mouth and nose when coughing or sneezing.<br>
+                            -Stay home if you feel unwell.<br>
+                            -Refrain from smoking and other activities that weaken the lungs.<br>
+                            -Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people.<br>                <br>
+            
+                             At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="reports">
+             <div id="box1">
+                <h5>Total Cases </h5>
+                <h5>{{b.0}}</h5>
+            </div>
+            <div id="box2">
+                <h5>Active Cases </h5>
+                <h5>{{b.2}}</h5>
+            </div>
+            <div id="box3">
+                <h5>Total Death </h5>
+                <h5>{{b.1}}</h5>
+            </div>
+            <div id="box4">
+                <h5> Recovered </h5>
+                <h5>{{b.3}}</h5>
+            </div>
+        </div>
+
+  <section id="section02" class="demo">
+  <h4><center>Updated Report of India</center></h4>
+  <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Search for any state of India..." title="Type in a name">
+</section>
+  <table id="myTable1">
+    <tr>
+      <th>State</th>
+      <th>Total Cases</th>
+      <th>Active Cases</th>
+      <th>Death</th>
+      <th>Recovered</th>
+    </tr>
+    {% for i in c %}
+  <tr>
+    <td>{{i.0}}</td>
+    <td>{{i.1}}</td>
+    <td>{{i.2}}</td>
+    <td>{{i.4}}</td>
+    <td>{{i.3}}</td>
+  </tr>
+  {% endfor %}
+  </table>
+
+
+  <section id="section04" class="demo">
+  <h4><center>Updated Report of Countries</center></h4>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Countries.." title="Type in a name">
+</section>
+  <table id="myTable">
+    <tr>
+      <th>Country</th>
+      <th>Total Cases</th>
+        <th>Today Cases</th>
+      <th>Death</th>
+        <th>Today Death</th>
+      <th>Recovered</th>
+        <th>Active Cases</th>
+        <th>Critical</th>
+        <th>Test</th>
+
+
+    </tr>
+   {% for i in a %}
+  <tr>
+    <td>{{i.0}}</td>
+    <td>{{i.1}}</td>
+      {% if i.2 > 0 %}
+      <td style = "background-color : red;">{{i.2}}</td>
+
+      {% else %}
+      <td> </td>
+      {% endif %}
+    <td>{{i.3}}</td>
+      {% if i.4 > 0 %}
+      <td style = "background-color : red;">{{i.4}}</td>
+      {% else %}
+      <td> </td>
+      {% endif %}
+      <td>{{i.5}}</td>
+     <td>{{i.6}}</td>
+      {% if i.8 > 0 %}
+      <td style = "background-color : red;">{{i.8}}</td>
+        {% else %}
+         <td> </td>
+        {% endif %}
+        <td>{{i.7}}</td>
+
+  </tr>
+  {% endfor %}
+  </table>
+  
+
+<div id="symptoms">
+  <section id="section06" class="demo">
+    <h6><center>Symptoms </center></h6>
+  </section>
+    <p align="left">
+        These symptoms may appear 2-14 days after exposure (based on the incubation period of MERS-CoV viruses).<br><br>
+
+        -Fever<br>
+        -Cough<br>
+        -Shortness of breath<br><br>
+    
+        <h7>When to Seek Medical Attention</h7>
+        If you develop emergency warning signs for COVID-19 get medical attention immediately. Emergency warning signs include*:<br><br>
+        
+        -Trouble breathing<br>
+        -Persistent pain or pressure in the chest<br>
+        -New confusion or inability to arouse<br>
+        -Bluish lips or face<br><br>
+        *This list is not all inclusive. Please consult your medical provider for any other symptoms that are severe or concerning.</p>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+     Back To Top</button>
+
+</div>
+<div id="about">
+    <p> Menka gorakhapuriya & Mohit gorakhapuriya| +918602718274 |mohitgorakhapuriya29@gmail.com| For the little things that bug you, give me a call.</p>
+</div>
+    </body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Corona</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/coroStyle.css' %}">
+  </head>
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#" style="color: white; font-size: 35px; margin-left: 20px;">EFFECT-O-METER</a>
+            <button class="navbar-toggler"  style="color: white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon" style="color: white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <section id="section01" class="demo">
+                <li class="nav-item">
+                  <a class="nav-link" href="#section02">India state wise</a>
+                </li>
+              </section>
+              <section id="section03" class="demo">
+                <li class="nav-item">
+                  <a class="nav-link" href="#section04">county wise</a>
+                </li>
+                </section>
+              
+              <section id="section07" class="demo">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Prevention</a>
+                  </li>
+                  </section>
+              </ul>
+            </div>
+          </nav>
+
+    </section>
+
+    <!-------------Banner section------------------>
+    <section id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="promo-title">COVID - 19</p>
+            <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.
+            </p>
+            <p>Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.</p>
+            <p>so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).
+</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="{% static 'img/19602.jpg' %}" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------service section----------->
+
+    <section id="services" class="demo">
+      <div class="container text-center">
+        <h1 class="title">WHAT TO DO ? </h1>
+        <div class="row">
+          <div class="col-md-6 services">
+            <img src="{% static 'img/prevention.jpg' %}" class="service-img">
+            <h4>Preventions : </h4>
+            <p>-Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.</p>
+            <p>-Maintain at least 1 metre distance between you and people coughing or sneezing.</p>
+            <p>-Avoid touching your face.</p>
+            <p>-Stay home if you feel unwell.</p>
+          </div>
+
+          <div class="col-md-6 services">
+            <img src="{% static 'img/symptoms.jpg' %}" class="service-img">
+            <section id="#section08" class="demo">
+            <h4>symptoms  : </h4>
+          </section>
+            <p>-Fever, Cough, Shortness of breath.</p>
+            <p>-Trouble Breathing.</p>
+            <p>-Persistant pain or pressure in the chest.</p>
+            <p>-Stay home if you feel unwell.</p>
+            <p>-New confusion or inability to arouse.</p>
+            <p>-Bluish lips or face.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!----------Current reports----------->
+    <section id="reports">
+      <div class="container">
+        <h1 class="title text-center">Current Reports</h1>
+        <div class="row text-center">
+          <div class="col-md-3">
+            <h5 style="margin-top: 30px;">Total Cases</h5>
+            <p>{{b.0}}</p>
+          </div>
+          <div class="col-md-3">
+            <h5 style="margin-top: 30px;">Active Cases</h5>
+            <p>{{b.2}}</p>
+          </div>
+          <div class="col-md-3">
+            <h5 style="margin-top: 30px;">Total Death</h5>
+            <p>{{b.1}}</p>
+          </div>
+          <div class="col-md-3">
+            <h5 style="margin-top: 30px;">Recovered</h5>
+            <p>{{b.3}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section02" class="demo">
+      <h3 class="text-center">Updated Reports of India</h3>
+    </section>
+
+      <div class="container">
+        <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" style = "width : 90%" placeholder="Search" aria-label="Search">
+        <table class="table table-dark" id="myTable" style = "width : 90%">
+          <thead>
+            <tr>
+             
+              <th scope="col">State</th>
+              <th scope="col">Total Cases</th>
+              <th scope="col">Active Cases</th>
+              <th scope="col">Death</th>
+              <th scope="col">Cured</th>
+            </tr>
+          </thead>
+          <tbody>
+           {% for i in c %}
+            <tr>
+              <td>{{i.0}}</td>
+              <td>{{i.1}}</td>
+              <td>{{i.2}}</td>
+              <td>{{i.4}}</td>
+              <td>{{i.3}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }
+      </script>
+
+
+    <section id="section04" class="demo">
+      <h3 class="text-center">Updated Reports of Countries</h3>
+      <div class="container">
+        <input class="form-control" type="text" id="myInput1" style = "width : 90%" onkeyup="myFunction1()" placeholder="Search" aria-label="Search">
+        <table class="table table-dark" id="myTable1" style = "width : 90%">
+          <thead>
+            <tr>
+             
+              <th scope="col">Country</th>
+              <th scope="col">Total Cases</th>
+              <th scope="col">Today Cases</th>
+              <th scope="col">Death</th>
+              <th scope="col">Today Death</th>
+              <th scope="col">Recovered</th>
+              <th scope="col">Active Cases</th>
+              <th scope="col">Critical</th>
+              <th scope="col">Test</th>
+            </tr>
+          </thead>
+          <tbody>
+           {% for i in a %}
+  <tr>
+    <td>{{i.0}}</td>
+    <td>{{i.1}}</td>
+      {% if i.2 > 0 %}
+      <td style = "background-color : red;">{{i.2}}</td>
+
+      {% else %}
+      <td> </td>
+      {% endif %}
+    <td>{{i.3}}</td>
+      {% if i.4 > 0 %}
+      <td style = "background-color : red;">{{i.4}}</td>
+      {% else %}
+      <td> </td>
+      {% endif %}
+      <td>{{i.5}}</td>
+     <td>{{i.6}}</td>
+      {% if i.8 > 0 %}
+      <td style = "background-color : red;">{{i.8}}</td>
+        {% else %}
+         <td> </td>
+        {% endif %}
+        <td>{{i.7}}</td>
+
+  </tr>
+  {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+    <script>
+      function myFunction1() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput1");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable1");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }
+      </script>
+
+
+
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+      Back To Top</button>
+
+</body>
+
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+<script>
+  $(function() {
+      $('a[href*=#]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+      });
+    });
+  </script>
+</html>
+
+
